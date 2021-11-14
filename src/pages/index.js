@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -25,6 +26,10 @@ const IndexPage = () => (
       <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
       <Link to="/using-dsg">Go to "Using DSG"</Link>
     </p>
+    <Helmet>
+    <script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="myathsu-test" ></script>
+<a href="javascript:void(0)" data-cb-type="checkout" data-cb-item-0="Starter-USD-Yearly" data-cb-item-0-quantity="1" >subscribe</a>
+    </Helmet>
   </Layout>
 )
 
